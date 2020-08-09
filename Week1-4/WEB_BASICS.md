@@ -15,7 +15,7 @@ in fact, we can use `telnet` to get the source of a web page
 including its metadata.
 
 Using telnet to connect us to a web page and get the data, maybe
-would be unnecessary because now we have better tools
+would be unnecessary because now we have better tools,
 but is interesting to know how the web methods work.
 
 ```bash

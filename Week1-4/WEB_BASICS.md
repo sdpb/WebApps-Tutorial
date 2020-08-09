@@ -17,5 +17,5 @@ As we can infer, there exist a lot of protocols and different types of extension
 i.e.
 
 ```html
-http://www.dr-chuck.com/page1.html
+http://www.dr-chuck.com/page1.htm
 ```

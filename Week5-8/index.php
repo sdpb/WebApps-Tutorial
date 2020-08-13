@@ -5,21 +5,21 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <div style="border: 5px solid violet;">
+    <div style="border: 5px solid red;">
       <h1>Samuel Palacios Bernate PHP</h1>
       <pre>
-          :####:
-         :######
-         ##:  :#
-         ##
-         ###:
-         :#####:
-          .#####:
-             :###
-               ##
-         #:.  :##
-         #######:
-         .#####:
+     :####:
+    :######
+    ##:  :#
+    ##
+    ###:
+    :#####:
+     .#####:
+        :###
+          ##
+    #:.  :##
+    #######:
+    .#####:
       </pre>
       <?php
         $name = 'Samuel Palacios Bernate';

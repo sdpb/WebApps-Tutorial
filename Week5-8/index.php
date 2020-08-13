@@ -22,7 +22,7 @@
          .#####:
       </pre>
       <?php
-        $name = 'Samuel Palacios Bernate'
+        $name = 'Samuel Palacios Bernate';
         print "The SHA256 hash of \"$name\" is " . hash('sha256', $name);
       ?>
     </div>

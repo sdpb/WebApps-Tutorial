@@ -28,7 +28,7 @@
     </div>
     <div>
       <a href="fail.php">Fail</a>
-      <br />
+      <br>
       <a href="check.php">Check</a>
     </div>
   </body>

@@ -33,11 +33,21 @@ $matrix = [
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+        function CheckScalar(val){
+            const element = document.getElementById('scalar');
+            if(val==="1")
+                element.style.display='contents';
+            else
+                element.style.display='none';
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="starter-template.css">
     <title>Samuel Palacios Bernate</title>
 </head>
     <body>
         <div class="container">
-        <h1>Matrix determinant calculator</h1>
+        <h1>Simple matrix calculator :)</h1>
         <?php
         if ( isset($_REQUEST['name']) ) {
             echo "<p>Welcome: ";
@@ -45,37 +55,34 @@ $matrix = [
             echo "</p>\n";
         }
         ?>
-
+        </div>
+        <div>
         <form method="post">
             <table>
                 <tr>
-                    <td><label><input type="text" name="1_1" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="1_2" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="1_3" size="7" maxlength="10" value="0"></label></td>
+                    <td><label><input type="number" name="1_1" size="7" maxlength="10" value="<?= $m1_1 ?>"></label></td>
+                    <td><label><input type="number" name="1_2" size="7" maxlength="10" value="<?= $m1_2 ?>"></label></td>
+                    <td><label><input type="number" name="1_3" size="7" maxlength="10" value="<?= $m1_3 ?>"></label></td>
                 </tr>
                 <tr>
-                    <td><label><input type="text" name="2_1" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="2_2" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="2_3" size="7" maxlength="10" value="0"></label></td>
+                    <td><label><input type="number" name="2_1" size="7" maxlength="10" value="<?= $m2_1 ?>"></label></td>
+                    <td><label><input type="number" name="2_2" size="7" maxlength="10" value="<?= $m2_2 ?>"></label></td>
+                    <td><label><input type="number" name="2_3" size="7" maxlength="10" value="<?= $m2_3 ?>"></label></td>
                 </tr>
                 <tr>
-                    <td><label><input type="text" name="3_1" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="3_2" size="7" maxlength="10" value="0"></label></td>
-                    <td><label><input type="text" name="3_3" size="7" maxlength="10" value="0"></label></td>
+                    <td><label><input type="number" name="3_1" size="7" maxlength="10" value="<?= $m3_1 ?>"></label></td>
+                    <td><label><input type="number" name="3_2" size="7" maxlength="10" value="<?= $m3_2 ?>"></label></td>
+                    <td><label><input type="number" name="3_3" size="7" maxlength="10" value="<?= $m3_3 ?>"></label></td>
                 </tr>
             </table>
-
-            <br>
-            <br>
-
             <label>
-                <select name="operation">
+                <select name="operation" onchange='CheckScalar(this.value);'>
                     <option value="-1">Select one</option>
                     <option value="0">Determinant</option>
                     <option value="1">Scalar multiplication</option>
                 </select>
-                <label>Scalar<input type="text" name="scalar" value="0"></label>
-            </label>
+                <label id="scalar" style="display: none;">Scalar: <input type="number" name="scalar" value=""></label>
+            </label><br><br>
             <input type="submit" name="calculate" value="Calculate">
             <input type="submit" name="logout" value="Logout">
         </form>

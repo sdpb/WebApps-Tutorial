@@ -10,7 +10,7 @@
 #### HTML explanation
 
 All the webpages have a source code invisible to the final user,
-but if we use the developer tools then we can see it, 
+but if we use the developer tools then we can see it,
 in fact, we can use `telnet` to get the source of a web page
 including its metadata.
 
@@ -45,7 +45,7 @@ adding an **80** after the web server URL, this number
 indicates the port we are using to connect us to the webpage.
 
 Note that the output content has three sections.
-        
+
 The first one is a **GET** request, this is one of
 the most basic methods used to establish a data
 exchange between the client and the server.
@@ -68,7 +68,7 @@ on the top of a browser, this is composed of three sections.
 - Document: "/somepage.EXT"
 
 As we can infer, there exist a lot of protocols and
-different types of extensions, for example:  
+different types of extensions, for example:
 
 ```html
 http://www.dr-chuck.com/page1.htm

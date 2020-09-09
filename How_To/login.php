@@ -23,22 +23,25 @@ if ( isset($_POST['who']) ) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" type="text/css" href="starter-template.css">
         <title>Samuel Palacios Bernate</title>
     </head>
     <body>
-        <div class="container">
-            <h1>Please Set an Username</h1>
+        <div>
+            <h1>Please set an Username</h1>
             <?php
                 // Note triple not equals and think how badly double
                 // not equals would work here...
                 if ( $failure !== false ) {
                     // Look closely at the use of single and double quotes
-                    echo('<p style="color: red;">'.htmlentities($failure)."</p>\n");
+                    echo('<p style="color: red; display: contents;">' . htmlentities($failure)."</p>\n");
                 }
             ?>
+        </div>
+        <div>
             <form method="POST">
-            <label for="nam">Username</label>
-                <input type="text" name="who" id="nam"><br/>
+            <label for="nam">Username </label>
+                <input type="text" name="who" id="nam"><br><br>
                 <input type="submit" value="Set username">
                 <input type="submit" name="cancel" value="Cancel">
             </form>
